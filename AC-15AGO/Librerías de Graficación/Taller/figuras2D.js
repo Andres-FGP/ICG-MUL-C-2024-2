@@ -60,4 +60,12 @@ coordenadasSelect.addEventListener('change', () => {
           ctx.fill();
           ctx.strokeStyle = colorBorde;
           ctx.stroke();
-          break;
+        break;
+        case 'cuadrado':
+          ctx.beginPath();
+          ctx.rect(x - radioFigura, y - radioFigura, radioFigura * 2, radioFigura * 2);
+          ctx.fillStyle = colorRelleno;
+          ctx.fill();
+          ctx.strokeStyle = colorBorde;
+          ctx.stroke();
+        break;  
