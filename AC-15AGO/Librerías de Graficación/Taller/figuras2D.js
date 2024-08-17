@@ -23,3 +23,8 @@ coordenadasSelect.addEventListener('change', () => {
       polaresDiv.style.display = 'block';
     }
   });
+
+  const limpiarButton = document.getElementById('limpiar');
+limpiarButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
