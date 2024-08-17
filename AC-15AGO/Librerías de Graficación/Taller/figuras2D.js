@@ -69,3 +69,14 @@ coordenadasSelect.addEventListener('change', () => {
           ctx.strokeStyle = colorBorde;
           ctx.stroke();
         break;  
+        case 'triangulo':
+          ctx.beginPath();
+          ctx.moveTo(x, y - radioFigura);
+          ctx.lineTo(x - radioFigura, y + radioFigura);
+          ctx.lineTo(x + radioFigura, y + radioFigura);
+          ctx.closePath();
+          ctx.fillStyle = colorRelleno;
+          ctx.fill();
+          ctx.strokeStyle = colorBorde;
+          ctx.stroke();
+        break;
