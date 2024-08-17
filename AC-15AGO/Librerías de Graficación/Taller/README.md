@@ -1,6 +1,6 @@
 CONCEPTOS FUNDAMENTALES APRENDIDOS:
 
-Como conceptos fundamentales, aaprendí el funcionamiento que tiene cada figura al momento de 
+Como conceptos fundamentales, aprendí el funcionamiento que tiene cada figura al momento de 
 dibujarla en el canvas, ya que no es solo decirle "dibuje un cuadrado" o cualquier otra figura
 sino que realente eso lleva un proceso matematico detras, donde es necesario especificar donde 
 se quiere colocar la figura.
