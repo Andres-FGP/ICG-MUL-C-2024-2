@@ -46,3 +46,8 @@ coordenadasSelect.addEventListener('change', () => {
       x = radio * Math.cos(angulo * Math.PI / 180);
       y = radio * Math.sin(angulo * Math.PI / 180);
     }
+
+    const radioFigura = parseInt(radioFiguraInput.value);
+    const lados = parseInt(ladosInput.value);
+    const colorRelleno = colorRellenoInput.value;
+    const colorBorde = colorBordeInput.value;
