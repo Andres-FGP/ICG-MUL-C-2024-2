@@ -51,3 +51,13 @@ coordenadasSelect.addEventListener('change', () => {
     const lados = parseInt(ladosInput.value);
     const colorRelleno = colorRellenoInput.value;
     const colorBorde = colorBordeInput.value;
+
+    switch (shape) {
+        case 'circulo':
+          ctx.beginPath();
+          ctx.arc(x, y, radioFigura, 0, 2 * Math.PI);
+          ctx.fillStyle = colorRelleno;
+          ctx.fill();
+          ctx.strokeStyle = colorBorde;
+          ctx.stroke();
+          break;
