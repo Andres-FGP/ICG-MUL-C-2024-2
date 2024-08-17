@@ -25,6 +25,24 @@ coordenadasSelect.addEventListener('change', () => {
   });
 
   const limpiarButton = document.getElementById('limpiar');
-limpiarButton.addEventListener('click', () => {
+    limpiarButton.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   });
+
+  dibujarButton.addEventListener('click', (e) => {
+
+    e.preventDefault();
+        
+    const shape = shapeSelect.value;
+    const coordenadas = coordenadasSelect.value;
+    let x, y;
+  
+    if (coordenadas === 'cartesianas') {
+      x = parseInt(xInput.value);
+      y = parseInt(yInput.value);
+    } else {
+      const radio = parseInt(radioInput.value);
+      const angulo = parseInt(anguloInput.value);
+      x = radio * Math.cos(angulo * Math.PI / 180);
+      y = radio * Math.sin(angulo * Math.PI / 180);
+    }
