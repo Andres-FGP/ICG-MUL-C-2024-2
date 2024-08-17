@@ -80,3 +80,23 @@ coordenadasSelect.addEventListener('change', () => {
           ctx.strokeStyle = colorBorde;
           ctx.stroke();
         break;
+        case 'poligono':
+        ctx.beginPath();
+        for (let i = 0; i < lados; i++) {
+          const angulo = i * 2 * Math.PI / lados;
+          const px = x + radioFigura * Math.cos(angulo);
+          const py = y + radioFigura * Math.sin(angulo);
+          if (i === 0) {
+            ctx.moveTo(px, py);
+          } else {
+            ctx.lineTo(px, py);
+          }
+        }
+        ctx.closePath();
+        ctx.fillStyle = colorRelleno;
+        ctx.fill();
+        ctx.strokeStyle = colorBorde;
+        ctx.stroke();
+        break;
+    }
+  });
