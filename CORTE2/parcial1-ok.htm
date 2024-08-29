@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Figura Poligono </title> <!--almacena la respuesta del numero de lados -->
+</head>
+<body> 
+    <h1> Poligono regular </h1>
+    <form> 
+        <label for="n">Número de lados :</label>
+        <input type="number" id="n" min="3" required><br><br> <!--almacena la respuesta del numero de lados -->
+        <label for="lado">Lado (L):</label>
+        <input type="number" id="lado" required><br><br> <!--almacena la respuesta del lado -->
+        <label for="cx">Coordenada x del centro:</label>
+        <input type="number" id="cx" required><br><br> <!--almacena la respuesta de coordenada x -->
+        <label for="cy">Coordenada y del centro:</label>
+        <input type="number" id="cy" required><br><br> <!--almacena la respuesta de coordenada y  -->
+        
+        <button type="submit">Dibujar poligono</button> <!--boton para que dibuje según instrucciones dadas -->
+    </form>
+
+    <canvas id="canvas" width="1000" height ="1000"></canvas> <!--crear el canvas  -->
+    <script src="parcial1-ok.js"></script>
+
+</body>
+</html>
