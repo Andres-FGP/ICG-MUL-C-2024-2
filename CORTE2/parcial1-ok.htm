@@ -1,26 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title> Figura Poligono </title> <!--almacena la respuesta del numero de lados -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polígono regular</title>
+  <style>
+    #canvas {
+      border: 1px solid black;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
-<body> 
-    <h1> Poligono regular </h1>
-    <form> 
-        <label for="n">Número de lados :</label>
-        <input type="number" id="n" min="3" required><br><br> <!--almacena la respuesta del numero de lados -->
-        <label for="lado">Lado (L):</label>
-        <input type="number" id="lado" required><br><br> <!--almacena la respuesta del lado -->
-        <label for="cx">Coordenada x del centro:</label>
-        <input type="number" id="cx" required><br><br> <!--almacena la respuesta de coordenada x -->
-        <label for="cy">Coordenada y del centro:</label>
-        <input type="number" id="cy" required><br><br> <!--almacena la respuesta de coordenada y  -->
-        
-        <button type="submit">Dibujar poligono</button> <!--boton para que dibuje según instrucciones dadas -->
-    </form>
+<body>
+  <h1>Polígono regular</h1>
+  <form>
+    <label for="lado">Lados:</label>
+    <input type="number" id="lado" min="3" value="3"><br><br>
 
-    <canvas id="canvas" width="1000" height ="1000"></canvas> <!--crear el canvas  -->
-    <script src="parcial1-ok.js"></script>
+    <input type="radio" id="opcion-apotema" name="opcion" value="apotema" checked>
+    <label for="opcion-apotema">Ingresar apotema</label><br>
+    <input type="radio" id="opcion-lado" name="opcion" value="lado">
+    <label for="opcion-lado">Ingresar lado</label><br><br>
 
+    <input type="radio" id="cartesianas" name="coordenadas" value="cartesianas" checked>
+    <label for="cartesianas">Cartesianas</label>
+    <input type="radio" id="polares" name="coordenadas" value="polares">
+    <label for="polares">Polares</label><br><br>
+
+    <div id="cartesianas-coordenadas">
+      <label for="x">X:</label>
+      <input type="number" id="x" value="200"><br><br>
+      <label for="y">Y:</label>
+      <input type="number" id="y" value="200"><br><br>
+    </div>
+
+    <div id="polares-coordenadas" class="hidden">
+      <label for="radio">Radio:</label>
+      <input type="number" id="radio" value="50"><br><br>
+      <label for="angulo">Ángulo:</label>
+      <input type="number" id="angulo" value="0"><br><br>
+    </div>
+
+    <div id="apotema-section">
+      <label for="apotema">Apotema:</label>
+      <input type="number" id="apotema" value="50"><br><br>
+    </div>
+  </form>
+  <button id="dibujar">Dibujar</button>
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <script src="parcial1-ok.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
