@@ -9,7 +9,7 @@ class Linea {
     }
 
     dibujar() {
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line"); // Esto es fundamental para que el navegador reconozca y renderice correctamente los elementos en SVG
         line.setAttribute("x1", this.x1);
         line.setAttribute("y1", this.y1);
         line.setAttribute("x2", this.x2);
@@ -27,7 +27,7 @@ class Circunferencia {
     }
 
     dibujar() {
-        const circ = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        const circ = document.createElementNS("http://www.w3.org/2000/svg", "circle"); // Esto es fundamental para que el navegador reconozca y renderice correctamente los elementos en SVG
         circ.setAttribute("cx", this.cx);
         circ.setAttribute("cy", this.cy);
         circ.setAttribute("r", this.r);
@@ -46,7 +46,7 @@ class Elipse {
     }
 
     dibujar() {
-        const elipse = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+        const elipse = document.createElementNS("http://www.w3.org/2000/svg", "ellipse"); // Esto es fundamental para que el navegador reconozca y renderice correctamente los elementos en SVG
         elipse.setAttribute("cx", this.cx);
         elipse.setAttribute("cy", this.cy);
         elipse.setAttribute("rx", this.a);
