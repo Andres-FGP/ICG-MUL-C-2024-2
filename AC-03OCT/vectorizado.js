@@ -30,6 +30,22 @@ function generarPuntosAleatorios(numPuntos) {
     return puntos;
 }
 
+// Ordenar puntos por ángulo respecto al centroide
+function ordenarPuntosPorAngulo(puntos) {
+    // Calcular el centroide de los puntos
+    const centroide = puntos.reduce((acum, p) => [acum[0] + p[0], acum[1] + p[1]], [0, 0]);
+    centroide[0] /= puntos.length;
+    centroide[1] /= puntos.length;
+
+    // Función para calcular el ángulo de un punto respecto al centroide
+    function calcularAngulo(punto) {
+        return Math.atan2(punto[1] - centroide[1], punto[0] - centroide[0]);
+    }
+
+    // Ordenar los puntos según su ángulo respecto al centroide
+    return puntos.slice().sort((a, b) => calcularAngulo(a) - calcularAngulo(b));
+}
+
 function esConvexo(puntos) {
     const n = puntos.length;
     let signos = [];
